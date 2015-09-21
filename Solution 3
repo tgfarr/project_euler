@@ -9,13 +9,15 @@ var largestPrime = function(number) {
   for(i = num; i> 1; i--) {
     fac = number / i;
     if(fac % 1 == 0) {
-      console.log(i);
       for(r = 2; r < i; r++) {
         p = i / r;
       	  if (p % 1 == 0) {
-            console.log(" is not prime");
             break;
+            } if(r == (i - 1)) {
+              console.log(i);
+              i = 1;
             }
+        
       }
     }
   }
